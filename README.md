@@ -88,3 +88,16 @@ DOM Storage is designed to provide a larger, more secure, and easier-to-use alte
 
     containers.json
     This file stores the details of containers used by the Container Tabs feature, including those created by extensions such as Facebook Container. 
+
+# step to move old data to new firefox profile
+
+     cd /home/username/.mozilla/firefox/                  ex: cd /home/james/.mozilla/firefox/
+     cd new_profile                                       ex: cd rmrtcu9g.default
+     
+     sudo rm -rf places.sqlite key4.db logins.json permissions.sqlite search.json.mozlz4 persdict.dat formhistory.sqlite cookies.sqlite cert9.db handlers.json containers.json content-prefs.sqlite extensions extension-settings.json extensions.json extension-store favicons.sqlite
+     
+     cd ..
+     cd old_profile                                       ex: cd 0796e5vp.dev.firefox
+     
+     sudo cp -rp  places.sqlite key4.db logins.json permissions.sqlite search.json.mozlz4 persdict.dat formhistory.sqlite cookies.sqlite cert9.db handlers.json containers.json content-prefs.sqlite extensions extension-settings.json extensions.json extension-store favicons.sqlite /home/username/.mozilla/firefox/new_profile
+     
